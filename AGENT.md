@@ -38,6 +38,9 @@ This document is a comprehensive agent-style guide for the **FRBExplorer** proje
 
 ---
 
+
+DO NOT PUSH ANYTHING to pulsars.json catalogue.json or repeaters.json this files are supposed to be automatically populated but the web it self!!!!
+
 ## ⚙️ Data Source and Update Workflow
 
 ### Data Origin  
