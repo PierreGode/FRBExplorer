@@ -8,7 +8,7 @@ This repository hosts a static website for browsing Fast Radio Burst (FRB) data.
 - **repeaters.html** - table of repeating FRB sources.
 - **plots.html** - basic chart visualisation of catalogue entries.
 
-## Local Testing
+## Local Testing..
 
 Run a simple HTTP server in the repository root:
 
