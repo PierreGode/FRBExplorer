@@ -1,6 +1,7 @@
 fetch('catalogue.json')
   .then(response => response.json())
   .then(data => {
+    console.log('Loaded catalogue.json for plots with', data.length, 'entries');
     const labels = data.map(d => d.FRB);
     const ctx = document.getElementById('frb-plot').getContext('2d');
     new Chart(ctx, {

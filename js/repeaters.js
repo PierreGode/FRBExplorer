@@ -1,6 +1,7 @@
 fetch('repeaters.json')
   .then(response => response.json())
   .then(data => {
+    console.log('Loaded repeaters.json with', data.length, 'entries');
     const table = document.getElementById('repeater-table');
     if (!data.length) {
       document.getElementById('status').textContent = 'No data available';

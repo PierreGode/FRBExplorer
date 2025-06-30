@@ -4,6 +4,7 @@ fetch('pulsars.json')
     // Sort by discovery year (newest first) and keep the five most recent
     data.sort((a, b) => (b.discovery_year || 0) - (a.discovery_year || 0));
     data = data.slice(0, 5);
+    console.log('Loaded pulsars.json with', data.length, 'entries');
 
     const table = document.getElementById('pulsar-table');
     if (!data.length) {
