@@ -9,7 +9,7 @@ This repository hosts a static website for browsing Fast Radio Burst (FRB) data.
 - **plots.html** - basic chart visualisation of catalogue entries.
 - **pulsars.html** - table of pulsars with chart.
 
-## Local Testing..
+## Local Testing
 
 Run a simple HTTP server in the repository root:
 
@@ -19,6 +19,14 @@ python3 -m http.server
 
 Then open `http://localhost:8000/index.html` in your browser. You can navigate to the other pages from there.
 
-## Pulsar Data
+## Automated Data Updates
 
-Run `node scripts/updatePulsars.js` to fetch the latest discoveries from the ATNF pulsar catalogue and populate `pulsars.json`. The file is kept empty in the repository.
+The repository includes a GitHub Actions workflow that fetches the latest catalogue, repeater and pulsar data once every hour and on each push. The workflow runs the helper scripts in `scripts/` and commits any changes before deploying the site to GitHub Pages.
+
+To run the update scripts locally:
+
+```bash
+./scripts/updateAll.sh
+```
+
+This will regenerate `catalogue.json`, `repeaters.json` and `pulsars.json` using the remote data sources.
