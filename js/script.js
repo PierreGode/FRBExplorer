@@ -1,6 +1,7 @@
 fetch('catalogue.json')
   .then(response => response.json())
   .then(data => {
+    console.log('Loaded catalogue.json with', data.length, 'entries');
     const table = document.getElementById('frb-table');
     if (!data.length) {
       document.getElementById('status').textContent = 'No data available';
