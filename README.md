@@ -1,6 +1,12 @@
 # FRBExplorer
 
-This repository hosts a static website for browsing Fast Radio Burst data. The site loads local JSON files and renders them in the browser using JavaScript.
+This repository hosts a static website for browsing Fast Radio Burst (FRB) data. All pages load local JSON files and render them in the browser using JavaScript.
+
+## Pages
+
+- **index.html** - overview table of all FRB detections.
+- **repeaters.html** - table of repeating FRB sources.
+- **plots.html** - basic chart visualisation of catalogue entries.
 
 ## Local Testing
 
@@ -10,4 +16,4 @@ Run a simple HTTP server in the repository root:
 python3 -m http.server
 ```
 
-Then open `http://localhost:8000/index.html` in your browser.
+Then open `http://localhost:8000/index.html` in your browser. You can navigate to the other pages from there.
