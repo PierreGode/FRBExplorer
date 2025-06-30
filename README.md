@@ -18,3 +18,7 @@ python3 -m http.server
 ```
 
 Then open `http://localhost:8000/index.html` in your browser. You can navigate to the other pages from there.
+
+## Pulsar Data
+
+Run `node scripts/updatePulsars.js` to fetch the latest discoveries from the ATNF pulsar catalogue and populate `pulsars.json`. The file is kept empty in the repository.
