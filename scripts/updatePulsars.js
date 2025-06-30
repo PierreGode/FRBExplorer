@@ -5,7 +5,7 @@ const fs = require('fs');
 const url = 'https://www.atnf.csiro.au/research/pulsar/psrcat/psrcat_csv.php?delimiter=,';
 
 function fetchCatalogue(cb) {
-  https.get(url, res => {
+  https.get(url, { family: 4 }, res => {
     if (res.statusCode !== 200) {
       cb(new Error('Failed to fetch data: ' + res.statusCode));
       return;
