@@ -7,6 +7,7 @@ This repository hosts a static website for browsing Fast Radio Burst (FRB) data.
 - **index.html** - overview table of all FRB detections.
 - **repeaters.html** - table of repeating FRB sources.
 - **plots.html** - basic chart visualisation of catalogue entries.
+- **pulsars.html** - table of pulsars with chart.
 
 ## Local Testing..
 

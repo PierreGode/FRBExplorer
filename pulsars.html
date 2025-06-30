@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FRBExplorer - Pulsars</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav><a href="index.html">Home</a> | <a href="repeaters.html">Repeaters</a> | <a href="plots.html">Plots</a> | <a href="pulsars.html">Pulsars</a></nav>
+    <h1>Pulsars</h1>
+  </header>
+  <main>
+    <section>
+      <p>Pulsars are fast-rotating neutron stars emitting beams of electromagnetic radiation, observed as regular pulses—like a cosmic lighthouse. Their properties such as pulse period, signal-to-noise ratio (SNR), and rotation speed provide insight into extreme physics including gravity and magnetism.</p>
+    </section>
+    <p id="status">Loading pulsars...</p>
+    <table id="pulsar-table"></table>
+    <canvas id="pulsar-chart" width="400" height="300"></canvas>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/pulsars.js"></script>
+</body>
+</html>
