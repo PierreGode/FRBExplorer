@@ -18,3 +18,7 @@ python3 -m http.server
 ```
 
 Then open `http://localhost:8000/index.html` in your browser. You can navigate to the other pages from there.
+
+## Pulsar data
+
+`pulsars.json` was generated from the latest ATNF pulsar catalogue using the `psrcat` package. Only core parameters (name, RA, DEC, spin period, magnetic field) are kept for display.
