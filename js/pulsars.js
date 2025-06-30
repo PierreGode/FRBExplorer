@@ -1,6 +1,10 @@
 fetch('pulsars.json')
   .then(response => response.json())
   .then(data => {
+    // Sort by discovery year (newest first) and keep the five most recent
+    data.sort((a, b) => (b.discovery_year || 0) - (a.discovery_year || 0));
+    data = data.slice(0, 5);
+
     const table = document.getElementById('pulsar-table');
     if (!data.length) {
       document.getElementById('status').textContent = 'No data available';
