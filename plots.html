@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FRBExplorer</title>
+  <title>FRBExplorer - Plots</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <nav><a href="index.html">Home</a> | <a href="repeaters.html">Repeaters</a> | <a href="plots.html">Plots</a></nav>
-    <h1>FRBExplorer</h1>
+    <h1>FRB Plots</h1>
   </header>
   <main>
-    <p id="status">Loading data...</p>
-    <table id="frb-table"></table>
+    <canvas id="frb-plot" width="400" height="300"></canvas>
   </main>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/plots.js"></script>
 </body>
 </html>
