@@ -21,12 +21,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+
       - name: Update data files
         run: |
           ./scripts/updateAll.sh
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions"
@@ -36,15 +39,17 @@ jobs:
             git commit -m "Automated data update"
             git push
           fi
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: './'
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
         id: deployment
+        uses: actions/deploy-pages@v4
