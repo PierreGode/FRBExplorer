@@ -29,6 +29,7 @@ This document is a comprehensive agent-style guide for the **FRBExplorer** proje
 | `js/script.js`     | Main JavaScript logic for data fetching, rendering, interactivity | Fetches data files and dynamically generates UI.       |
 | `vendor/`          | Third-party libraries (e.g., Bootstrap, FontAwesome, Chart.js) | Required JS/CSS dependencies loaded locally or via CDN.|
 | `catalogue.json`   | JSON dataset of all recorded FRBs                               | Static data source for FRB events.                      |
+| `pulsars.json`   | JSON dataset of all recorded pulsars                              | Static data source                    |
 | `repeaters.json`   | JSON dataset of known repeating FRBs                            | Static data source for repeater listings.               |
 | `tns_search.csv` (optional) | Additional CSV data for search/filtering                 | Optional, used if enhanced search/filter needed.       |
 | `img/`, `figs/`    | Images, icons, logos                                            | Visual assets referenced in HTML/CSS.                   |
@@ -43,11 +44,9 @@ This document is a comprehensive agent-style guide for the **FRBExplorer** proje
 - Original FRB and repeater data are published by scientific organizations like NASA/JPL, CHIME, LIGO, Breakthrough Listen, etc.  
 - These organizations provide raw astronomical datasets related to Fast Radio Bursts and related phenomena.
 
-### Offline Data Processing  
-- Python scripts (`parser.py`, `tns_parser.py`, etc.) are used offline to:  
-  - Download raw datasets from official repositories and APIs.  
-  - Parse, filter, and transform raw data into clean JSON files (`catalogue.json`, `repeaters.json`).  
-- This process must be done periodically to keep the data current.
+## all files are to be pupulated automatically by the webpage
+
+## website limits: html/js
 
 ### Data Usage on Site  
 - The website does **not** query any API or database live.  
@@ -99,10 +98,9 @@ This document is a comprehensive agent-style guide for the **FRBExplorer** proje
 ## 🔄 Maintenance and Data Updates
 
 - To update data:  
-  1. Run Python scripts locally to fetch and process the latest raw FRB data.  
-  2. Replace `catalogue.json` and `repeaters.json` files on the server with newly generated versions.  
-  3. Test locally before upload to avoid breaking changes.  
-  4. Upload via FTP to live server.  
+  1. Run site scripts to fetch and process the latest raw FRB data.  
+  2. Replace `catalogue.json`, pulsars.json and `repeaters.json` files on the server with newly generated versions.  
+  4. Upload via FTP to web domain server.  
 
 - Regular updates keep site scientifically relevant and accurate.
 
@@ -125,7 +123,8 @@ This document is a comprehensive agent-style guide for the **FRBExplorer** proje
 - Original FRBSTATS repo: (link to GitHub repo)  
 - Chart.js: https://www.chartjs.org/  
 - DataTables: https://datatables.net/  
-- Bootstrap: https://getbootstrap.com/  
+- Bootstrap: https://getbootstrap.com/
+- https://www.atnf.csiro.au/research/pulsar/psrcat/ 
 
 ---
 
